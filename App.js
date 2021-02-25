@@ -1,3 +1,10 @@
-import Main from "./src/screens/Main";
+import React from "react";
 
-export default Main;
+import Main from "./src/screens/Main";
+import { NameProvider } from "./src/util/NameManager";
+
+export default () => (
+  <NameProvider>
+    <Main />
+  </NameProvider>
+);

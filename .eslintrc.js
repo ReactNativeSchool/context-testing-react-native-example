@@ -1,5 +1,7 @@
 module.exports = {
   root: true,
   extends: ["handlebarlabs"],
-  rules: {},
+  rules: {
+    "react/jsx-one-expression-per-line": 0,
+  },
 };
