@@ -19,13 +19,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Main = ({ saveName, name }) => {
+export default () => {
+  const { name, saveName } = useName();
   const [newName, setNewName] = React.useState(null);
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="position">
       <Text style={styles.headerText}>Welcome, {name || "No Name"}!</Text>
-      {/* <Text style={styles.headerText}>Enter your name:</Text> */}
 
       <Input
         label="Name"
@@ -43,10 +43,4 @@ export const Main = ({ saveName, name }) => {
       />
     </KeyboardAvoidingView>
   );
-};
-
-export default (props) => {
-  const { name, saveName } = useName();
-
-  return <Main name={name} saveName={saveName} {...props} />;
 };
