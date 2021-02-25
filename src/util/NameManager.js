@@ -5,7 +5,7 @@ const NameContext = React.createContext();
 export const useName = () => React.useContext(NameContext);
 
 export const NameProvider = ({ children }) => {
-  const [name, saveName] = React.useState("New User");
+  const [name, saveName] = React.useState();
 
   return (
     <NameContext.Provider value={{ name, saveName }}>
