@@ -19,8 +19,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default () => {
-  const { name, saveName } = useName();
+export const Main = ({ name, saveName }) => {
   const [newName, setNewName] = React.useState(null);
 
   return (
@@ -43,4 +42,10 @@ export default () => {
       />
     </KeyboardAvoidingView>
   );
+};
+
+export default (props) => {
+  const { name, saveName } = useName();
+
+  return <Main name={name} saveName={saveName} {...props} />;
 };
